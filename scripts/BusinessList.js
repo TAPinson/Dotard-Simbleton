@@ -44,3 +44,18 @@ export const manufacturingBusinessList = () => {
     )
     
 }
+
+
+// Listing only purchasing agents
+import { agents } from './BusinessProvider.js';
+
+const agentTarget = document.querySelector(".agents")
+
+export const agentList = () => {
+    agentTarget.innerHTML = "<hr><h1> Purchasing Agents</h1>"
+    agents.forEach((agent) => {
+        agentTarget.innerHTML += `
+        ${agent} <br>
+        `
+    })
+}
