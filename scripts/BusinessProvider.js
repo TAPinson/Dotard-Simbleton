@@ -123,5 +123,9 @@ const businesses = [
 
   // Create a new array that contains only purchasing agent name strings
 export const agents = businesses.map(businessObject => {
-    return businessObject.purchasingAgent.nameFirst + " " + businessObject.purchasingAgent.nameLast
-})
+    return {
+      "fullName": businessObject.purchasingAgent.nameFirst + " " + businessObject.purchasingAgent.nameLast,
+      "company": businessObject.companyName,
+      "phoneNumber": businessObject.phoneWork
+    }
+  })
